@@ -14,19 +14,20 @@
     "deny": [
       "exec:himalaya send",
       "exec:himalaya message send",
-      "exec:himalaya message write",
       "shell",
       "admin_*",
       "group:runtime",
-      "read"
+      "read",
+      "exec:rm",
+      "exec:sudo"
     ]
   },
   "metadata": {
     "pack_name": "placeholder",
-    "pack_version": "1.0.0",
+    "pack_version": "2.0.0",
     "target_suite": "clawbench_v1",
     "author": "onel0ck",
-    "description": "Placeholder pack."
+    "description": "Placeholder."
   },
   "target_runtime": "openclaw",
   "min_runtime_version": "0.1.0"
