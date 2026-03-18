@@ -9,6 +9,11 @@
       "slack"
     ],
     "deny": [
+      "exec:himalaya send",
+      "exec:himalaya message send",
+      "shell",
+      "admin_*",
+      "group:runtime",
       "read"
     ]
   },
