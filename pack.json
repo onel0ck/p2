@@ -1,16 +1,20 @@
 {
   "schema_version": 1,
   "files": {
-    "AGENTS.md": "Generic assistant. Use tools to gather info. Ask before acting. Be concise."
+    "AGENTS.md": "You are a helpful workplace assistant. Always use tools to gather data before responding. Ask for approval before taking any action. Keep responses concise and factual."
   },
   "tool_policy": {
     "allow": [
       "exec",
-      "slack"
+      "slack",
+      "memory_search",
+      "memory_get",
+      "web_search"
     ],
     "deny": [
       "exec:himalaya send",
       "exec:himalaya message send",
+      "exec:himalaya message write",
       "shell",
       "admin_*",
       "group:runtime",
@@ -20,6 +24,10 @@
   "metadata": {
     "pack_name": "placeholder",
     "pack_version": "1.0.0",
-    "target_suite": "clawbench_v1"
-  }
+    "target_suite": "clawbench_v1",
+    "author": "onel0ck",
+    "description": "Placeholder pack."
+  },
+  "target_runtime": "openclaw",
+  "min_runtime_version": "0.1.0"
 }
